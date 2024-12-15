@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+        
+    <!--stylesheets-->
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <!--Sidebar-->
+    <div class="grid-container">
+        <div class="grid-item" id="mainmenu">
+            <div class="nested-grid-container" id="mainmenu">
+                <div class="nested-grid-item" id="dashboard">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>electron-framework</title>
+                        <path d="M12 22C10.33 22 8.84 20.5 7.9 17.93C7.83 17.73 7.93 17.5 8.14 17.44C8.34 17.36 8.56 17.47 8.63 17.67C9.44 19.9 10.7 21.23 12 21.23C12.94 21.23 13.87 20.55 14.62 19.31C14.73 19.13 14.96 19.07 15.15 19.18C15.33 19.29 15.39 19.53 15.28 19.71C14.38 21.19 13.22 22 12 22M15.91 17.72C15.87 17.72 15.83 17.71 15.8 17.7C15.59 17.63 15.5 17.42 15.54 17.21C16 15.81 16.22 14.18 16.22 12.5C16.22 8.65 14.97 5.24 13.19 4.14C12.94 4.5 12.5 4.78 12 4.78C11.24 4.78 10.61 4.16 10.61 3.39C10.61 2.62 11.24 2 12 2C12.77 2 13.4 2.61 13.41 3.37C15.53 4.5 17 8.21 17 12.5C17 14.25 16.75 15.96 16.28 17.45C16.23 17.61 16.08 17.72 15.91 17.72M12 2.77C11.66 2.77 11.38 3.05 11.38 3.39C11.38 3.73 11.67 4 12 4C12.35 4 12.64 3.73 12.64 3.39C12.64 3.05 12.35 2.77 12 2.77M4.08 18.54C3.31 18.54 2.68 17.91 2.68 17.15C2.68 16.66 2.94 16.22 3.33 15.97C3.19 13.56 5.68 10.41 9.5 8.22C11.09 7.32 12.75 6.67 14.32 6.34C14.5 6.29 14.73 6.42 14.77 6.63C14.82 6.84 14.69 7.05 14.5 7.09C13 7.41 11.41 8.03 9.9 8.89C6.46 10.86 4.1 13.68 4.1 15.76C4.86 15.77 5.5 16.39 5.5 17.15C5.5 17.92 4.85 18.54 4.08 18.54M4.08 16.53C3.74 16.53 3.46 16.81 3.46 17.15C3.46 17.5 3.74 17.77 4.08 17.77S4.71 17.5 4.71 17.15C4.71 16.81 4.42 16.53 4.08 16.53M18.5 13.44C18.43 13.44 18.34 13.41 18.27 13.35C18.11 13.21 18.09 12.97 18.23 12.8C19.77 11 20.3 9.26 19.64 8.14C19.17 7.33 18.1 6.88 16.63 6.86C16.41 6.86 16.24 6.68 16.25 6.47C16.25 6.26 16.43 6.1 16.64 6.09C18.39 6.11 19.7 6.7 20.31 7.75C21.15 9.19 20.6 11.21 18.82 13.3C18.74 13.39 18.63 13.44 18.5 13.44M16.5 18.9C14.5 18.9 11.94 18.16 9.5 16.77C7.95 15.88 6.57 14.79 5.5 13.63C5.35 13.47 5.36 13.23 5.5 13.08C5.68 12.94 5.92 12.95 6.07 13.11C7.08 14.21 8.4 15.25 9.89 16.1C13.2 18 16.77 18.63 18.65 17.72C18.57 17.55 18.5 17.35 18.5 17.15C18.5 16.38 19.15 15.76 19.92 15.76C20.69 15.76 21.32 16.38 21.32 17.15C21.32 17.92 20.69 18.54 19.92 18.54C19.64 18.54 19.39 18.46 19.17 18.32C18.47 18.71 17.56 18.9 16.5 18.9M19.5 17.63C19.63 17.71 19.77 17.77 19.92 17.77C20.27 17.77 20.55 17.5 20.55 17.15C20.55 16.81 20.27 16.53 19.92 16.53S19.3 16.81 19.3 17.15C19.3 17.29 19.35 17.42 19.43 17.53C19.47 17.55 19.5 17.59 19.5 17.63M4.46 12C4.33 12 4.2 11.92 4.13 11.8C3.23 10.25 3.08 8.81 3.7 7.74C4.54 6.3 6.58 5.76 9.31 6.25C9.5 6.29 9.66 6.5 9.62 6.7C9.59 6.91 9.39 7.05 9.18 7C6.82 6.59 5 7 4.37 8.13C3.89 8.95 4.04 10.11 4.8 11.41C4.9 11.6 4.84 11.83 4.65 11.94C4.59 11.97 4.53 12 4.46 12M12.21 13.4C11.71 13.5 11.21 13.19 11.11 12.69C11 12.2 11.32 11.71 11.81 11.6C12.31 11.5 12.81 11.81 12.91 12.31C13 12.8 12.7 13.29 12.21 13.4Z" />
+                    </svg>
+                    <h3>Dashboard</h3>
+                </div>
+                <div class="nested-nested-grid-container">
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>home</title>
+                                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                            </svg>
+                            <p><b>Home</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>message</title>
+                                <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2Z" />
+                            </svg>
+                            <p><b>Messages</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>history</title>
+                                <path d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" />
+                            </svg>
+                            <p><b>History</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>file-check-outline</title>
+                                <path d="M23.5 17L18.5 22L15 18.5L16.5 17L18.5 19L22 15.5L23.5 17M13.09 20H6V4H13V9H18V13.09C18.33 13.04 18.66 13 19 13S19.67 13.04 20 13.09V8L14 2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H13.81C13.46 21.39 13.21 20.72 13.09 20Z" />
+                            </svg>
+                            <p><b>Tasks</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>account-group</title>
+                                <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+                            </svg>
+                            <p><b>Communities</b></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="nested-nested-grid-container">
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>cog</title>
+                                <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                            </svg>
+                            <p><b>Settings</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>alpha-s-box</title>
+                                <path d="M11,7A2,2 0 0,0 9,9V11A2,2 0 0,0 11,13H13V15H9V17H13A2,2 0 0,0 15,15V13A2,2 0 0,0 13,11H11V9H15V7H11M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" />
+                            </svg>
+                            <p><b>Support</b></p>
+                        </button>
+                    </div>
+                    <div class="nested-nested-grid-item">
+                        <button class="svg-button">
+                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>shield-lock-outline</title>
+                                <path d="M21,11C21,16.55 17.16,21.74 12,23C6.84,21.74 3,16.55 3,11V5L12,1L21,5V11M12,21C15.75,20 19,15.54 19,11.22V6.3L12,3.18L5,6.3V11.22C5,15.54 8.25,20 12,21M14.8,11V9.5C14.8,8.1 13.4,7 12,7C10.6,7 9.2,8.1 9.2,9.5V11C8.6,11 8,11.6 8,12.2V15.7C8,16.4 8.6,17 9.2,17H14.7C15.4,17 16,16.4 16,15.8V12.3C16,11.6 15.4,11 14.8,11M13.5,11H10.5V9.5C10.5,8.7 11.2,8.2 12,8.2C12.8,8.2 13.5,8.7 13.5,9.5V11Z" />
+                            </svg>
+                            <p><b>Privacy</b></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="searchbar">
+            <div class="nested-grid-container" id="search">
+                <div class="nested-grid-item" id="icon">
+                    <button class="svg-button">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>search</title>
+                            <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nested-grid-item" id="searchbar">
+                    <form>
+                        <input type="text" placeholder="Search for a project" class="form-control">
+                    </form>
+                </div>
+                <div class="nested-grid-item" id="notifs">
+                    <button class="svg-button">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>notifs</title>
+                            <path d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nested-grid-item" id="profile">
+                    <button class="svg-button">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>profile</title>
+                            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nested-grid-item" id="name">
+                    <p><b>Promist-Moon</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="functions">
+            <div class="nested-grid-container" id="functions">
+                <div class="nested-grid-item" id="profile-pic">
+                    <img src="static/beom.jpg" alt="profile">
+                </div>
+                <div class="nested-grid-item" id="welcome">
+                    <p>Greetings,</p>
+                    <h3>Promist-Moon</h3>
+                </div><div class="nested-grid-item" id="buttons">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-info">New</button>
+                        <button type="button" class="btn btn-secondary">Upload</button>
+                        <button type="button" class="btn btn-info">Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="everythingelse">
+            <div class="nested-grid-container" id="main">
+                <div class="nested-grid-item" id="projects">
+                    <p><b>Your Projects</b></p>
+                    <div class="project-grid-container">
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 1</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 2</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 3</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 4</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 5</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-grid-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Project 6</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>star-plus</title>
+                                                <path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C14.9 12 12.4 14.3 12 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>eye-plus-outline</title>
+                                                <path d="M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C12.36,19.5 12.72,19.5 13.08,19.45C13.03,19.13 13,18.82 13,18.5C13,18.14 13.04,17.78 13.1,17.42C12.74,17.46 12.37,17.5 12,17.5C8.24,17.5 4.83,15.36 3.18,12C4.83,8.64 8.24,6.5 12,6.5C15.76,6.5 19.17,8.64 20.82,12C20.7,12.24 20.56,12.45 20.43,12.68C21.09,12.84 21.72,13.11 22.29,13.5C22.56,13 22.8,12.5 23,12C21.27,7.61 17,4.5 12,4.5M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,14.5V17.5H15V19.5H18V22.5H20V19.5H23V17.5H20V14.5H18Z" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="btn btn-info">
+                                            <svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <title>share-variant-outline</title>
+                                                <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12S8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5S19.66 2 18 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12S4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.91 18 21.91S20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08M18 4C18.55 4 19 4.45 19 5S18.55 6 18 6 17 5.55 17 5 17.45 4 18 4M6 13C5.45 13 5 12.55 5 12S5.45 11 6 11 7 11.45 7 12 6.55 13 6 13M18 20C17.45 20 17 19.55 17 19S17.45 18 18 18 19 18.45 19 19 18.55 20 18 20Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nested-grid-item" id="announcements">
+                    <p><b>Announcements</b></p>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="announcement-grid-container">
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Site Maintenance</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Community Share Day</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Upload Privacy Policy</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Upload Privacy Policy</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Upload Privacy Policy</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nested-grid-item" id="trending">
+                    <p><b>Trending</b></p>
+                    <div class="card" id="trending">
+                        <div class="card-body">
+                            <div class="announcement-grid-container">
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Site Maintenance</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Community Share Day</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                                <div class="announcement-grid-item">
+                                    <p>
+                                        <b>Upload Privacy Policy</b><br>
+                                        What heading says meowmeowmeowmeowmeowmeowmeowmeow
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
